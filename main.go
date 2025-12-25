@@ -14,4 +14,5 @@ StructMethods()
 Interface()
 MultipleInterface()
 TypeAssertions()
+TypeSwitches()
 }
