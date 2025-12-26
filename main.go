@@ -15,4 +15,5 @@ Interface()
 MultipleInterface()
 TypeAssertions()
 TypeSwitches()
+ErrorHandling()
 }
