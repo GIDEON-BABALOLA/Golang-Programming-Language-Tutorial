@@ -16,4 +16,7 @@ MultipleInterface()
 TypeAssertions()
 TypeSwitches()
 ErrorHandling()
+ErrorFormatting()
+ErrorInterface()
+CustomError()
 }
