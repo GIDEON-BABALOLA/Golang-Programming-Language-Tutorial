@@ -20,7 +20,7 @@ for _, name := range names {
 }
 return coolMap, nil
 }
-type userMap struct {
+type userMap struct{
 	name string
 	phoneNumber int
 }
