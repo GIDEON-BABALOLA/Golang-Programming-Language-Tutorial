@@ -20,7 +20,7 @@ func testDivide(dividend, divisor float64){
 	if err != nil {
 		divError := err.Error()
         fmt.Println(divError)
-		fmt.Println("==============================")
+		fmt.Println("==============================") 
 		return
 	}
 	fmt.Printf("Quotient: %.2f \n", result)
@@ -31,4 +31,4 @@ testDivide(10, 0)
 testDivide(10, 2)
 testDivide(15, 30)
 testDivide(6, 3)
-}
+} 
