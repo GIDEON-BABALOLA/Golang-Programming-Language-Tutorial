@@ -66,5 +66,3 @@ testMaps(
 	[]int{1444449944444, 233444488494444, 333490333333},
 )
 }
-
-// Hi, Good morning, Happy new year and how have been your holiday. So I was speaking to charles some days ago on Quantitative finance, then he told me that he remebers you telling him that you know someone that is into Quant finance
