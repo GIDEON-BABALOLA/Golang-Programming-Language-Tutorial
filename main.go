@@ -27,5 +27,6 @@ func main() {
 // VariadicSlice()
 // SlicesOfSlices()
 // Range()
-Maps()
+// Maps()
+MutatingMaps()
 }

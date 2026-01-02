@@ -1,4 +1,4 @@
-// Arrays have a fixed size in Go
+// Arrays have a fixed size in Go, that's what differentiates them from slices
 package main
 
 import "fmt"

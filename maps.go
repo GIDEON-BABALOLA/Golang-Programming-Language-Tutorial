@@ -6,18 +6,23 @@ import (
 )
 
 // Maps are similar to JavaScript objects, Python dictionaries, and Ruby hashes. Maps are a data structure that provides key->value mapping.
-// The zero value of a map is nil.
+// The zero value of a map is nil just like the zero value of an array is nil.
 // We can create a map by using a literal or by using the make() function
 func getUserMap(names []string, phoneNumbers []int) (map[string]userMap, error) {
-coolMap := make(map[string]userMap)
 if len(names) != len(phoneNumbers) {
 	return nil, errors.New("Invalid Sizes")
 }
-for _, name := range names {
-	for _, phone := range phoneNumbers {
-		coolMap[name] = userMap{name : name, phoneNumber: phone}
-	}
+coolMap := make(map[string]userMap)
+for i := 0; i < len(names); i++{
+key := names[i]
+value := phoneNumbers[i]
+coolMap[key] = userMap{ name: key, phoneNumber: value}
 }
+// for _, name := range names {
+// 	for _, phone := range phoneNumbers {
+// 		coolMap[name] = userMap{name : name, phoneNumber: phone}
+// 	}
+// }
 return coolMap, nil
 }
 type userMap struct{
@@ -61,3 +66,5 @@ testMaps(
 	[]int{1444449944444, 233444488494444, 333490333333},
 )
 }
+
+// Hi, Good morning, Happy new year and how have been your holiday. So I was speaking to charles some days ago on Quantitative finance, then he told me that he remebers you telling him that you know someone that is into Quant finance

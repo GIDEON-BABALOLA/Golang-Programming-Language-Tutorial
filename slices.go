@@ -56,7 +56,7 @@ func SlicesInGo(){
 primes := [6]int{2, 3, 5, 7, 11, 13}
 mySlice := primes[1:4]
 fmt.Println(mySlice)
-fmt.Println(primes [:])
+fmt.Println(primes[:])
 fmt.Println(getMessageWithRetriesForPlan(planFree))
 testSlices("Ozgur", 3, planFree)
 testSlices("Jeff", 3, planPro)

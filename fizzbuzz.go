@@ -8,7 +8,7 @@ import (
 // Go supports the standard modulo operator
 // 7 % 3 returns 1
 // Logical AND operator
-// true && true // false
+// true && false // false
 // true && true // true
 // Logical OR operator
 // true || false // true
