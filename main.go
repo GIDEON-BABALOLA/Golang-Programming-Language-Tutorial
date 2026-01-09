@@ -28,5 +28,10 @@ func main() {
 // SlicesOfSlices()
 // Range()
 // Maps()
-MutatingMaps()
+// MutatingMaps()
+// CountInstances()
+// NestedMaps()
+// CurryingFuncton()
+// DeferKeyword()
+Closures()
 }

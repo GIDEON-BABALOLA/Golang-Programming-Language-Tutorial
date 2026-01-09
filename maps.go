@@ -8,22 +8,18 @@ import (
 // Maps are similar to JavaScript objects, Python dictionaries, and Ruby hashes. Maps are a data structure that provides key->value mapping.
 // The zero value of a map is nil just like the zero value of an array is nil.
 // We can create a map by using a literal or by using the make() function
+
 func getUserMap(names []string, phoneNumbers []int) (map[string]userMap, error) {
 if len(names) != len(phoneNumbers) {
 	return nil, errors.New("Invalid Sizes")
 }
-coolMap := make(map[string]userMap)
+newMap := make(map[string]userMap)
 for i := 0; i < len(names); i++{
 key := names[i]
 value := phoneNumbers[i]
-coolMap[key] = userMap{ name: key, phoneNumber: value}
+newMap[key] = userMap{ name: key, phoneNumber: value}
 }
-// for _, name := range names {
-// 	for _, phone := range phoneNumbers {
-// 		coolMap[name] = userMap{name : name, phoneNumber: phone}
-// 	}
-// }
-return coolMap, nil
+return newMap, nil
 }
 type userMap struct{
 	name string
@@ -33,6 +29,7 @@ func testMaps(names []string, phoneNumbers []int){
 	fmt.Println("Creating map...")
 	defer fmt.Println("=============================")
 	users, err := getUserMap(names, phoneNumbers)
+	fmt.Println(users)
 	if err != nil {
 		fmt.Println(err)
 		return;
@@ -66,3 +63,25 @@ testMaps(
 	[]int{1444449944444, 233444488494444, 333490333333},
 )
 }
+
+
+// func getUserMap(names []string, phoneNumbers []int) (map[string]int, error) {
+// if len(names) != len(phoneNumbers) {
+// 	return nil, errors.New("Invalid Sizes")
+// }
+// newMap := make(map[string]int)
+// for _, name := range names {
+// 	for _, number := range phoneNumbers {
+// 		newMap[name] = number
+// 		break;
+// 	}
+// }
+// return newMap, nil
+// }
+// So basically what I wanted to accomplish was to directly map items from one slice to another slice using a map data structure in Go. So this was it, I had two slices, the first one an slice of names
+//  {"John", "Bob", "Jill"}
+// And the second one an slice of phone numbers
+// {081149787227, 091076478721", "0818060467636"}
+// And my desired result was to have a map like this
+// {john: +2348149787227, Bob : +2349076478721, Jill : +2348060467636}
+// So initially my normal self would just directly start writing the code and my initial approach was to use a nested loop.

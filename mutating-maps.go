@@ -10,9 +10,9 @@ import (
 // delete(m, key) // Delete an element
 // elem, ok := m[key] // Checks if an element exists, So if key is in m, then ok is true. If not, ok is false. If the key is not in the map, then elem is the zero value for the map's element type.
 // Note On Passing Maps
-// Like slices, maps are also passed by reference into functions. This means that when a map is passed into a function we write, we can make changes to the original, we don't have a copy
+// Like slices, maps are also passed by reference into functions. This means that when a map is passed into a function we write, we are making changes to the original, we don't have a copy
 
-// What maks a type qualify to be able to be used as a map key, Any type can be used as a map value but not every type can be used as a map key and that is because map key may be of any type that is comparable, so we cannot use slices, maps and functions as our map keys
+// What makes a type qualify to be able to be used as a map key, Any type can be used as a map value but not every type can be used as a map key and that is because map key may be of any type that is comparable, so we cannot use slices, maps and functions as our map keys,  but we can use structs as keys
 type mutateUsers struct {
 	name string
     number int
@@ -65,3 +65,4 @@ users := map[string]mutateUsers{
 testMutating(users, "john")
 testMutating(users, "musk")
 }
+// Structs are comparable
