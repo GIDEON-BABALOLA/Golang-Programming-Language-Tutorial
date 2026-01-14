@@ -23,3 +23,4 @@ fmt.Println(allNumbersDoubled)
 // prints:
 // [2 4 6 8 10]
 }
+// https://chatgpt.com/share/6966ecbf-d6f0-8013-b387-6115ad3e7b26
