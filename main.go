@@ -33,5 +33,6 @@ func main() {
 // NestedMaps()
 // CurryingFuncton()
 // DeferKeyword()
-Closures()
+// Closures()
+AnonymousFunctions()
 }
